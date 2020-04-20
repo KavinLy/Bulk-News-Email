@@ -5,16 +5,16 @@ import json
 
 def whatCategory(category):
     if category == 'technology':
-        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=technology&apiKey=80ed1377f8a942c1838e28b64d593b63')
+        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=technology&apiKey=')
         sendmail(url, category)
     elif category == 'entertainment':
-        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=entertainment&apiKey=80ed1377f8a942c1838e28b64d593b63')
+        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=entertainment&apiKey=')
         sendmail(url, category)
     elif category == 'business':
-        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=business&apiKey=80ed1377f8a942c1838e28b64d593b63')
+        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=business&apiKey=')
         sendmail(url, category)
     elif category == 'general':
-        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=general&apiKey=80ed1377f8a942c1838e28b64d593b63')
+        url = urlopen('http://newsapi.org/v2/top-headlines?country=gb&category=general&apiKey=')
         sendmail(url, category)
     else:
         print('Not a valid category!')
