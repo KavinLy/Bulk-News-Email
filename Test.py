@@ -28,7 +28,8 @@ def sendmail(url, category):
  
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('lyk4coventry@gmail.com', 'Random-01')
+    # replace 'someone@gmail.com' with chosen email
+    server.login('someone@gmail.com', 'Random-01')
     content = resp["articles"][0]['content']
     lenContent = content[0:150]
     bodyMsg = resp["articles"][0]['description'] + '\n\n' + lenContent + '...' + '\n\n To read more click the link below: \n' + resp["articles"][0]['url']
@@ -38,7 +39,8 @@ def sendmail(url, category):
     message = 'Subject: {}\n\n{}'.format(subject,body)
 
     for email in emails:
-        server.sendmail('lyk4coventry@gmail.com', email, message)
+        # replace 'someone@gmail.com' with chosen email
+        server.sendmail('someone@gmail.com', email, message)
     server.quit()
     print('Email has been sent!')
 
